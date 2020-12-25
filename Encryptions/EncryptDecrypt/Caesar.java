@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Caesar {
 	private static String[] alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-	private static String[] alphabetLower = "abcdefghjiklmnopqrstuvwxyz".split("");
+	private static String[] alphabetLower = "abcdefghijklmnopqrstuvwxyz".split("");
 	
 	public String Encrypt(String input, int key) {
 		String inputArry[] = input.split("");
