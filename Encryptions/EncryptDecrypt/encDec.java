@@ -20,9 +20,9 @@ public class encDec {
 //		String k = c.Encrypt(userInput, key);
 //		String j = c.Decrypt(k, key);
 		String k = v.Encrypt(userInput,userKey);
-		
+		String j = v.Decrypt(k, userKey);
 		System.out.println(k);
-//		System.out.println(j);
+		System.out.println(j);
 		input.close();
 	}
 

@@ -36,11 +36,11 @@ public class Caesar {
 		for(int i = 0; i < input.length(); i++) {
 			for(int k = 0; k < alphabetUpper.length; k++) {
 				if(alphabetUpper[k].equals(inputArry[i])) {
-					inputArry[i] = alphabetUpper[(((k-key)+26)%26)];
+					inputArry[i] = alphabetUpper[((Math.abs(k-key)+26)%26)];
 					break;
 				}
 				if(alphabetLower[k].equals(inputArry[i])) {
-					inputArry[i] = alphabetLower[(((k-key)+26)%26)];
+					inputArry[i] = alphabetLower[((Math.abs(k-key)+26)%26)];
 					break;
 				}
 			}
