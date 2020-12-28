@@ -6,7 +6,7 @@ public class Caesar {
 	private static String[] alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 	private static String[] alphabetLower = "abcdefghijklmnopqrstuvwxyz".split("");
 	
-	public String Encrypt(String input, int key) {
+	public void Encrypt(String input, int key) {
 		String inputArry[] = input.split("");
 		for(int i = 0; i < input.length(); i++) {
 			for(int k = 0; k < alphabetUpper.length; k++) {
@@ -26,10 +26,10 @@ public class Caesar {
 		encrypted = encrypted.replace("[", "");
 		encrypted = encrypted.replace("]", "");
 		encrypted = encrypted.replaceAll("\\s+", "");
-		return encrypted;
-	}
+		System.out.println("The encrypted phrase is: " + encrypted);
+		}
 	
-	public String Decrypt(String input, int key) {
+	public void Decrypt(String input, int key) {
 		String decrypted = "";
 		
 		String inputArry[] = input.split("");
@@ -50,6 +50,6 @@ public class Caesar {
 		decrypted = decrypted.replace("[", "");
 		decrypted = decrypted.replace("]", "");
 		decrypted = decrypted.replaceAll("\\s+", "");
-		return decrypted;
+		System.out.println("The decrypted phrase is: " + decrypted);
 	}
 }

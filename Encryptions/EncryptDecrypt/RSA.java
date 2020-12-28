@@ -8,7 +8,7 @@ public class RSA {
 	private static String[] alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 	private static String[] alphabetLower = "abcdefghijklmnopqrstuvwxyz".split("");
 	
-	public static void rsaEncrypt(String m, int n, int r){
+	public void rsaEncrypt(String m, int n, int r){
 		int len = m.length();
 		double c[];
 		c = new double[len];
@@ -28,7 +28,7 @@ public class RSA {
 		System.out.println(cHex);
 	}
 	
-	public static void rsaDecrypt(String m, int n,int d) {
+	public void rsaDecrypt(String m, int n,int d) {
 		String message[] = m.split(" ");
 		int len = message.length;
 
@@ -60,7 +60,7 @@ public class RSA {
 	}
 	
 	// Takes cipher decimal array and returns hex string
-	public static String readableEncrypted(double c[], int len){
+	public String readableEncrypted(double c[], int len){
 		int cRead[];
 		cRead = new int[len];
 		String cHex[];

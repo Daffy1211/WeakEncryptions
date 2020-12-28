@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Vignere {
 		private static String[] alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 		private static String[] alphabetLower = "abcdefghijklmnopqrstuvwxyz".split("");
-		public String Encrypt (String input, String key) {
+		public void Encrypt (String input, String key) {
 			
 			String inputArry[] = input.split("");
 			String keyArry[] = key.split("");
@@ -46,10 +46,10 @@ public class Vignere {
 			encrypted = encrypted.replace("[", "");
 			encrypted = encrypted.replace("]", "");
 			encrypted = encrypted.replaceAll("\\s+", "");
-			return encrypted;
+			System.out.println("The encrypted phrase is: " + encrypted);
 			
 		}
-		public String Decrypt(String input, String key) {
+		public void Decrypt(String input, String key) {
 			String inputArry[] = input.split("");
 			String keyArry[] = key.split("");
 			int keyNumArry[];
@@ -89,6 +89,6 @@ public class Vignere {
 			decrypted = decrypted.replace("[", "");
 			decrypted = decrypted.replace("]", "");
 			decrypted = decrypted.replaceAll("\\s+", "");
-			return decrypted;
+			System.out.println("The decrypted phrase is: " + decrypted);
 		}
 }
